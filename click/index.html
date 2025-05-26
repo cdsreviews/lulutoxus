@@ -1,13 +1,13 @@
-<!-- ·ÅÔÚĞèÒªÌø×ªµÄÒ³Ãæ -->
+<!-- æ”¾åœ¨éœ€è¦è·³è½¬çš„é¡µé¢ -->
 <script>
     (function () {
-        // Ö»¶ÁÈ¡ localStorage
+        // åªè¯»å– localStorage
         const gclid = localStorage.getItem('gclid') || '0';
         const fbclid = localStorage.getItem('fbclid') || '0';
         const scCid = localStorage.getItem('sc_cid') || '0';
         const utmTerm = localStorage.getItem('utm_term') || '0';
 
-        // Ñ¡ÔñÒ»¸ö´æÔÚµÄ ID£ºgclid > fbclid > ScCid
+        // é€‰æ‹©ä¸€ä¸ªå­˜åœ¨çš„ IDï¼šgclid > fbclid > ScCid
         const trackingId = gclid !== '0' ? gclid : fbclid !== '0' ? fbclid : scCid;
 
         const baseUrl = 'https://nmttrack.com/';
@@ -19,14 +19,14 @@
             s1: 'Google',
             s2: 'XHD',
             s3: 'AW-17028711680/YkwnCLnF-74aEICK9rc_',
-            s4: 'lulutox.productspotlight.fun',
+            s4: 'lulutoxus.onrender.com',
             s5: trackingId || '0',
             utm_term: utmTerm
         });
 
         const finalUrl = baseUrl + '?' + params.toString();
 
-        // ±ÜÃâÔÚÄ¿±êÓòÖØ¸´Ìø×ª
+        // é¿å…åœ¨ç›®æ ‡åŸŸé‡å¤è·³è½¬
         if (!window.location.href.includes('nmttrack.com')) {
             window.location.href = finalUrl;
         }
